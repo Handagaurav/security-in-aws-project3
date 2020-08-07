@@ -2,9 +2,9 @@ Based on the architecture diagram, and the steps you have taken so far to upload
 
 # Poor practice 1
 
-Error: The public and private subnet network ACL rules allow traffic from all ports on each and every port.
+Error: The public and private subnet network ACL rules allow traffic from all ports on each and every port. The inbound and outbound rules of security groups also allow all the traffic.
 
-Fix: We can use Network ACL rules to diminish the available network connectivity to decrease the traffic that can be sent to and from the subnet. 
+Fix: We can use Network ACL rules to diminish the available network connectivity to decrease the traffic that can be sent to and from the subnet and the security group. 
 Doing this will reduce the ability of malicious actions by an attacker that can be performed against the infrastructure.
 
 # Poor practice 2
