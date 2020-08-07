@@ -1,0 +1,16 @@
+Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
+
+Errors:
+1. The security groups allow ingress from 0.0.0.0/0 to port 22 and 5000.
+2. The default security group of every VPC allows all traffic.
+3. TCP port(5000) is accessible on the EC2 Instance.
+4. SSH is listening on port 22 on the EC2 Instance.
+5. All administrative rights are allowed by the IAM policy.
+
+Recommendations on how to remediate the vulnerabilities.
+
+Fix:
+1. Make changes to the inbound rule for each security group to allow ingress from restricted IPs or delete the rule allowing ingress on port 22 and 5000.
+2. Add the required rules to other security groups attached to every vpc or else delete all inbound and outbound rules.
+3. Close port 22, 5000 and all other unnecessary ports on the EC2 instance.
+4. Implement stronger IAM policy with least privilege access role.

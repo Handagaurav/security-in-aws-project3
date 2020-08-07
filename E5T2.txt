@@ -1,0 +1,26 @@
+# Identify tools that will allow you to do the following:
+
+## Scan infrastructure as code templates
+
+CFRipper: Library and CLI tool for analysing CloudFormation templates and check them for security compliance.
+
+### Example vulnerability
+
+EC2SecurityGroupMissingEgressRule: Missing egress rule in NoIngressSecurityGroup means all traffic is allowed outbound. Make this explicit if it is desired configuration
+
+## Scan AMI’s or containers for OS vulnerabilities
+
+Anchore Engine: Vulnerability Static Analysis for Containers
+
+### Example vulnerability
+
+Vulnerability ID  Package         Severity  Fix        Vulnerability URL
+CVE-2019-14697    musl-1.1.22.r2  High      1.1.22-r3  http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14697
+
+##Scan an AWS environment for cloud configuration vulnerabilities
+
+AWS Config: A service that enables you to assess, audit, and evaluate the configurations of your AWS resources.
+
+### Example vulnerability
+
+s3-bucket-server-side-encryption-enabled - Checks that your Amazon S3 bucket either has S3 default encryption enabled or that the S3 bucket policy explicitly denies put-object requests without server side encryption.

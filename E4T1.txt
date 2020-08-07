@@ -1,0 +1,12 @@
+# Identify 2-3 changes that can be made to our environment to prevent an ssh brute force attack from the internet.
+
+Error: Public-private key is being using for authentication process by application server.
+Fix: Instead AWS Systems Manager's Session Manager service should be used.
+Error: Anyone can attempt to login to application server on port 22.
+Fix: Block the IPs that are allowed to interact with application server by providing CIDR block or IP address.
+
+# Neither instance should have had access to the secret recipes bucket, in the even that instance API credentials were compromised how could we have prevented access to sensitive data.
+
+Use least privileged access model.
+Restricting actions in the policy.
+Enable server side encryption in the S3 bucket.
